@@ -64,16 +64,16 @@
       <UniqueIdentifier>{7c238d6e-2173-4d90-88ec-cf36aa6fa2d7}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxWMFVideoPlayer">
-      <UniqueIdentifier>{0bcd8dcf-7a0e-42fc-a7ba-25829e7f2104}</UniqueIdentifier>
+      <UniqueIdentifier>{b64d16b2-0c1e-4667-8fa6-9772cc61e811}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxWMFVideoPlayer\src">
-      <UniqueIdentifier>{ec51c1c1-d9f9-407a-b291-1412b4a74a3c}</UniqueIdentifier>
+      <UniqueIdentifier>{0a9cde1c-47ba-4686-8a58-8782db207372}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxWMFVideoPlayer\src\presenter">
-      <UniqueIdentifier>{a1455401-48e5-421a-b963-37d36b60e2a5}</UniqueIdentifier>
+      <UniqueIdentifier>{f48b2d18-3522-4d40-84e7-018c97dad5a4}</UniqueIdentifier>
     </Filter>
     <Filter Include="addons\ofxWMFVideoPlayer\src\presenter\common">
-      <UniqueIdentifier>{4afd4aa2-add1-49ed-a931-9630a859cad5}</UniqueIdentifier>
+      <UniqueIdentifier>{ab154f73-1ac4-4799-8caf-8f7427b2138d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

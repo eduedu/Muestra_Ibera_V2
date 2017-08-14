@@ -25,6 +25,15 @@ class ofApp : public ofBaseApp{
 
 		//ofVideoPlayer video1;
 		//ofDirectShowPlayer video1;
-		ofxWMFVideoPlayer video1;
+		//ofxWMFVideoPlayer video1;
+		
+		///VIDEOS
 		//ofxWMFVideoPlayer video[2];
+		//int cantidadDeVideos = 2;
+
+		ofxWMFVideoPlayer video1;
+		ofxWMFVideoPlayer video2;
+
+		//ofVideoPlayer video1;
+		//ofVideoPlayer video2;
 };
