@@ -13,13 +13,14 @@ void ofApp::setup() {
 	//video[0].load("video1a.mp4");
 	//video[1].load("video1b.mp4");
 	video1.load("video1b.mp4");
-	//video2.load("video1b.mp4");
+	//video2.load("video1a.mp4");
+	//video1.load("zvideo1a.avi");
+	video2.load("zvideo1a.avi");
 	//video1.load("zvideo1a.avi");
 	//video2.load("zvideo1b.avi");
-	//video1.load("zvideo1a.avi");
-	video2.load("zvideo1b.avi");
 
-	//video1.setLoopState(OF_LOOP_NORMAL);
+	video1.setLoopState(OF_LOOP_NORMAL);
+	video2.setLoopState(OF_LOOP_NORMAL);
 	//video1.setUseTexture(false);
 
 	///VIDEO: play
@@ -28,6 +29,7 @@ void ofApp::setup() {
 	//}
 	video1.play();
 	video2.play();
+	
 
 }
 
@@ -60,7 +62,30 @@ void ofApp::draw() {
 	video1.draw(20, 20, videoW * escala, videoH * escala);
 	video2.draw(500, 20, videoW * escala, videoH * escala);
 
+	//ofPixels tex = video1.getPixels();
+	//ofTexture tex2 = video2.getTexture();
+	//ofSetColor(255);
+	//tex.draw(20, 20, videoW * escala, videoH * escala);
 
+	//video2.draw(500, 20, videoW * escala, videoH * escala);
+
+
+	//ofSetHexColor(0x000000);
+	//ofPixels & pixels = video1.getPixels();
+
+	//int vidWidth = pixels.getWidth();
+	//int vidHeight = pixels.getHeight();
+	//int nChannels = pixels.getNumChannels();
+
+	//// let's move through the "RGB(A)" char array
+	//// using the red pixel to control the size of a circle.
+	//for (int i = 4; i < vidWidth; i += 8) {
+	//	for (int j = 4; j < vidHeight; j += 8) {
+	//		unsigned char r = pixels[(j * 320 + i)*nChannels];
+	//		float val = 1 - ((float)r / 255.0f);
+	//		ofDrawCircle(500 + i, 20 + j, 10 * val);
+	//	}
+	//}
 }
 
 //--------------------------------------------------------------
