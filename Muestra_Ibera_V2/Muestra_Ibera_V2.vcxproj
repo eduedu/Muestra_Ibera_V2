@@ -95,15 +95,16 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -116,16 +117,17 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -137,8 +139,10 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -149,7 +153,6 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -161,8 +164,10 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>
-D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;
+D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -172,7 +177,6 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
@@ -187,6 +191,12 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\ofxWMFVideoPlayer.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\ofxWMFVideoPlayerUtils.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\Helpers.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\PresentEngine.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\Presenter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\scheduler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
   </ItemGroup>
@@ -200,6 +210,29 @@ D:\of_v0.9.8_vs_release\addons\ofxGui\src;%(AdditionalIncludeDirectories)</Addit
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\ofxWMFVideoPlayer.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\ofxWMFVideoPlayerUtils.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\AsyncCB.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\BufferLock.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\ClassFactory.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\common.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\critsec.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\GrowArray.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\linklist.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\logging.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\logmediatype.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\mediatype.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\mfutils.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\PropVar.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\registry.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\TinyMap.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\trace.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\EVRPresenter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\EVRPresenterUuid.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\Helpers.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\PresentEngine.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\Presenter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\scheduler.h" />
     <ClInclude Include="src\ofApp.h" />
   </ItemGroup>
   <ItemGroup>

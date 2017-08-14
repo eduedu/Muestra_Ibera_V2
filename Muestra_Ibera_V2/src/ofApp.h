@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxWMFVideoPlayer.h"
 
 class ofApp : public ofBaseApp{
 
@@ -21,4 +22,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+
+		//ofVideoPlayer video1;
+		//ofDirectShowPlayer video1;
+		ofxWMFVideoPlayer video1;
+		//ofxWMFVideoPlayer video[2];
 };
