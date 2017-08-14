@@ -2,7 +2,6 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-	//ofBackground(255, 255, 255);
 	ofBackground(51);
 	ofSetVerticalSync(true);
 
@@ -12,8 +11,6 @@ void ofApp::setup() {
 	///VIDEO: load
 	video[0].load("video1a.mp4");
 	video[1].load("video1b.mp4");
-	//video1.load("video1b.mp4");
-	//video2.load("video1a.mp4");
 
 	//video1.load("zvideo1a.avi");
 	//video2.load("zvideo1a.avi");
@@ -24,16 +21,12 @@ void ofApp::setup() {
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		video[i].setLoopState(OF_LOOP_NORMAL);
 	}
-	//video1.setLoopState(OF_LOOP_NORMAL);
-	//video2.setLoopState(OF_LOOP_NORMAL);
 	//video1.setUseTexture(false);
 
 	///VIDEO: play
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		video[i].play();
 	}
-	//video1.play();
-	//video2.play();
 	
 
 }
@@ -44,9 +37,7 @@ void ofApp::update() {
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		video[i].update();
 	}
-	//video1.update();
-	//video2.update();
-
+	
 	///window: titulo, fps
 	std::stringstream strm;
 	strm << "Muestra Ibera V2 - fps: " << ofGetFrameRate();
@@ -64,17 +55,8 @@ void ofApp::draw() {
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
 	}
-	//video1.draw(20, 20, videoW * escala, videoH * escala);
-	//video2.draw(500, 20, videoW * escala, videoH * escala);
 
-	//ofPixels tex = video1.getPixels();
-	//ofTexture tex2 = video2.getTexture();
-	//ofSetColor(255);
-	//tex.draw(20, 20, videoW * escala, videoH * escala);
-
-	//video2.draw(500, 20, videoW * escala, videoH * escala);
-
-
+	
 	//ofSetHexColor(0x000000);
 	//ofPixels & pixels = video1.getPixels();
 
