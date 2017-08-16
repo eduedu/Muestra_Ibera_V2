@@ -199,6 +199,8 @@ D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;%(Addition
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\scheduler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
+    <ClCompile Include="src\miWebcam.cpp" />
+    <ClCompile Include="src\zfun.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.h" />
@@ -234,6 +236,8 @@ D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;%(Addition
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\Presenter.h" />
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\scheduler.h" />
     <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="src\miWebcam.h" />
+    <ClInclude Include="src\zfun.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

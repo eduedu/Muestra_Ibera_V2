@@ -49,6 +49,12 @@
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\scheduler.cpp">
       <Filter>addons\ofxWMFVideoPlayer\src\presenter</Filter>
     </ClCompile>
+    <ClCompile Include="src\zfun.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\miWebcam.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -175,6 +181,12 @@
     </ClInclude>
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common\trace.h">
       <Filter>addons\ofxWMFVideoPlayer\src\presenter\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\zfun.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\miWebcam.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,17 +1,19 @@
 #include "ofApp.h"
+#include "zfun.h"
+#include "miWebcam.h"
+
+
+///webcam
+miWebcam webcam1;
+miWebcam webcam2;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
 	ofBackground(51);
-	ofSetVerticalSync(true);
-
-	// Uncomment this to show movies with alpha channels
-	// fingerMovie.setPixelFormat(OF_PIXELS_RGBA);
 
 	///VIDEO: load
 	video[0].load("video1a.mp4");
 	video[1].load("video1b.mp4");
-
 	//video1.load("zvideo1a.avi");
 	//video2.load("zvideo1a.avi");
 	//video1.load("zvideo1a.avi");
@@ -27,7 +29,15 @@ void ofApp::setup() {
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		video[i].play();
 	}
-	
+
+	///VIDEO: otras configuraciones
+	ofSetVerticalSync(true);
+	// Uncomment this to show movies with alpha channels
+	// fingerMovie.setPixelFormat(OF_PIXELS_RGBA);
+
+	///WEBCAMS
+	webcam1.setup(20, 300, 0);
+	webcam2.setup(20 + 500, 300, 1);
 
 }
 
@@ -37,11 +47,15 @@ void ofApp::update() {
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		video[i].update();
 	}
-	
+
 	///window: titulo, fps
 	std::stringstream strm;
 	strm << "Muestra Ibera V2 - fps: " << ofGetFrameRate();
 	ofSetWindowTitle(strm.str());
+
+	///webcam
+	webcam1.update();
+	webcam2.update();
 }
 
 //--------------------------------------------------------------
@@ -56,7 +70,7 @@ void ofApp::draw() {
 		video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
 	}
 
-	
+
 	//ofSetHexColor(0x000000);
 	//ofPixels & pixels = video1.getPixels();
 
@@ -73,10 +87,26 @@ void ofApp::draw() {
 	//		ofDrawCircle(500 + i, 20 + j, 10 * val);
 	//	}
 	//}
+
+	///webcam
+	webcam1.draw();
+	webcam2.draw();
+
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
+
+	///webcam
+	if (key == '1')
+	{
+		webcam1.siguiente();
+	}
+	if (key == '2')
+	{
+		webcam2.siguiente();
+	}
+
 
 }
 

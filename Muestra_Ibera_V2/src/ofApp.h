@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 #include "ofxWMFVideoPlayer.h"
+#include "zfun.h"
+//#include "miWebcam.h"
 
 class ofApp : public ofBaseApp{
 
@@ -36,4 +38,10 @@ class ofApp : public ofBaseApp{
 
 		//ofVideoPlayer video1;
 		//ofVideoPlayer video2;
+
+		
+		//ofVideoGrabber webcam1;
+		//ofVideoGrabber webcam2;
+		//int camWidth;
+		//int camHeight;
 };
