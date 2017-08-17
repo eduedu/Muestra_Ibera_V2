@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta35.8.dtd" >
-   <PATCH nodename="C:\Users\Eduardo\Documents\Ibera\Muestra_Ibera_V2\Muestra_Ibera_V2\bin\MAIN-LectorQr.v4p" systemname="MAIN-LectorQr" filename="C:\Users\Eduardo\Documents\Ibera\Muestra_Ibera_V2\Muestra_Ibera_V2\bin\MAIN-LectorQr.v4p">
+   <PATCH nodename="C:\Users\Eduardo\Documents\Ibera\Muestra_Ibera_V2\MAIN-LectorQr.v4p" systemname="MAIN-LectorQr" filename="C:\Users\Eduardo\Documents\Ibera\Muestra_Ibera_V2\Muestra_Ibera_V2\bin\MAIN-LectorQr.v4p">
    <BOUNDS type="Window" left="4260" top="1440" width="13425" height="10650">
    </BOUNDS>
    <NODE systemname="About (VVVV)" nodename="About (VVVV)" componentmode="Hidden" id="0">
@@ -453,7 +453,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5640" top="6900" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" values="fff,s">
+   <PIN pinname="Input String" slicecount="2" values="fff,i">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>

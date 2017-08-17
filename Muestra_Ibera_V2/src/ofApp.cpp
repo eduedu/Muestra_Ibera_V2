@@ -4,9 +4,9 @@
 #include "ofAppGLFWWindow.h"
 
 ///ventanas
-bool mostrarVentana1 = true;
+bool mostrarVentana1 = false;
 bool estaVisibleVentana1 = false;
-bool mostrarVentana2 = true;
+bool mostrarVentana2 = false;
 bool estaVisibleVentana2 = false;
 
 
@@ -22,7 +22,7 @@ void ofApp::setup() {
 	ofBackground(51);
 
 	///ocultar consola
-	FreeConsole();
+	//FreeConsole();
 
 	///VIDEO: load
 	video[0].load("video1a.mp4");
@@ -87,36 +87,37 @@ void ofApp::update() {
 			// both the arguments are int32's
 			gIndex = m.getArgAsInt32(0);
 		}
-		//else {
-		//	// unrecognized message: display on the bottom of the screen
-		//	string msg_string;
-		//	msg_string = m.getAddress();
-		//	msg_string += ": ";
-		//	for (int i = 0; i < m.getNumArgs(); i++) {
-		//		// get the argument type
-		//		msg_string += m.getArgTypeName(i);
-		//		msg_string += ":";
-		//		// display the argument - make sure we get the right type
-		//		if (m.getArgType(i) == OFXOSC_TYPE_INT32) {
-		//			msg_string += ofToString(m.getArgAsInt32(i));
-		//		}
-		//		else if (m.getArgType(i) == OFXOSC_TYPE_FLOAT) {
-		//			msg_string += ofToString(m.getArgAsFloat(i));
-		//		}
-		//		else if (m.getArgType(i) == OFXOSC_TYPE_STRING) {
-		//			msg_string += m.getArgAsString(i);
-		//		}
-		//		else {
-		//			msg_string += "unknown";
-		//		}
-		//	}
-		//	// add to the list of strings to display
-		//	msg_strings[current_msg_string] = msg_string;
-		//	timers[current_msg_string] = ofGetElapsedTimef() + 5.0f;
-		//	current_msg_string = (current_msg_string + 1) % NUM_MSG_STRINGS;
-		//	// clear the next line
-		//	msg_strings[current_msg_string] = "";
-		//}
+		else {
+			// unrecognized message: display on the bottom of the screen
+			string msg_string;
+			msg_string = m.getAddress();
+			msg_string += ": ";
+			for (int i = 0; i < m.getNumArgs(); i++) {
+				// get the argument type
+				msg_string += m.getArgTypeName(i);
+				msg_string += ":";
+				// display the argument - make sure we get the right type
+				if (m.getArgType(i) == OFXOSC_TYPE_INT32) {
+					msg_string += ofToString(m.getArgAsInt32(i));
+				}
+				else if (m.getArgType(i) == OFXOSC_TYPE_FLOAT) {
+					msg_string += ofToString(m.getArgAsFloat(i));
+				}
+				else if (m.getArgType(i) == OFXOSC_TYPE_STRING) {
+					msg_string += m.getArgAsString(i);
+				}
+				else {
+					msg_string += "unknown";
+				}
+			}
+			//// add to the list of strings to display
+			//msg_strings[current_msg_string] = msg_string;
+			//timers[current_msg_string] = ofGetElapsedTimef() + 5.0f;
+			//current_msg_string = (current_msg_string + 1) % NUM_MSG_STRINGS;
+			//// clear the next line
+			//msg_strings[current_msg_string] = "";
+			cons(msg_string);
+		}
 	}
 }
 
@@ -165,6 +166,7 @@ void ofApp::drawVentana1(ofEventArgs & args) {
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana1) {
 			ofSetWindowShape(videoW*escala, videoH*escala);
+			ofSetWindowPosition(150, 50);
 			estaVisibleVentana1 = true;
 		}
 
@@ -178,8 +180,8 @@ void ofApp::drawVentana1(ofEventArgs & args) {
 	else {
 		if (estaVisibleVentana1)
 		{
-
 			ofSetWindowShape(0, 0);
+			ofSetWindowPosition(0, -50);
 			estaVisibleVentana1 = false;
 		}
 	}
@@ -215,6 +217,7 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana2) {
 			ofSetWindowShape(videoW*escala, videoH*escala);
+			ofSetWindowPosition(videoW*escala + 150, 50);
 			estaVisibleVentana2 = true;
 		}
 
@@ -229,6 +232,7 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 		if (estaVisibleVentana2)
 		{
 			ofSetWindowShape(10, 10);
+			ofSetWindowPosition(0, -50);
 			estaVisibleVentana2 = false;
 		}
 	}
@@ -260,7 +264,11 @@ void ofApp::keyPressed(int key) {
 		webcam2.siguiente();
 	}
 
-
+	///salir
+	if (key == 'q')
+	{
+		ofExit(0);
+	}
 }
 
 //--------------------------------------------------------------
@@ -314,5 +322,8 @@ void ofApp::dragEvent(ofDragInfo dragInfo) {
 }
 
 void ofApp::close() {
-	ofExit();
+	cons("CHAUUUUUUUUUUUUU");
+	ofExit(0);
+	ofExitCallback();
+	
 }

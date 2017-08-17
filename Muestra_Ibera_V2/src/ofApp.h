@@ -30,6 +30,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		void close();
+		//void event
 		
 		///ventanas
 		void setupVentana1();
