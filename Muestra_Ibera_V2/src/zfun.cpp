@@ -14,7 +14,11 @@ static string ofxTrimString(string str) {
 	return ofxTrimStringLeft(ofxTrimStringRight(str));;
 }
 
-void cons(string str) {
-	cout << str << endl;
+void cons(string strOrInt) {
+	cout << strOrInt  << endl;
+	return;
+}
+void cons(int strOrInt) {
+	cout << ofToString(strOrInt) << endl;
 	return;
 }

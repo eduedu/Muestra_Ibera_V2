@@ -12,6 +12,7 @@ class ofApp : public ofBaseApp{
 		void update();
 		void draw();
 
+
 		void keyPressed(int key);
 		void keyReleased(int key);
 		void mouseMoved(int x, int y );
@@ -24,6 +25,15 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+		///ventanas
+		void setupVentana1();
+		void drawVentana1(ofEventArgs & args);
+		//void mouseDraggedVentana1(ofMouseEventArgs & args);
+		void keyPressedVentana1(ofKeyEventArgs & args);
+		void keyPressedVentana2(ofKeyEventArgs & args);
+		void setupVentana2();
+		void drawVentana2(ofEventArgs & args);
+
 
 		//ofVideoPlayer video1;
 		//ofDirectShowPlayer video1;

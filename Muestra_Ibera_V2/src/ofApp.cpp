@@ -1,6 +1,13 @@
 #include "ofApp.h"
 #include "zfun.h"
 #include "miWebcam.h"
+#include "ofAppGLFWWindow.h"
+
+///ventanas
+bool mostrarVentana1 = true;
+bool estaVisibleVentana1 = false;
+bool mostrarVentana2 = true;
+bool estaVisibleVentana2 = false;
 
 
 ///webcam
@@ -41,6 +48,7 @@ void ofApp::setup() {
 
 }
 
+
 //--------------------------------------------------------------
 void ofApp::update() {
 	///VIDEO: update
@@ -66,8 +74,14 @@ void ofApp::draw() {
 	float escala = 0.3;
 	float videoW = 1280;
 	float videoH = 720;
-	for (int i = 0; i < cantidadDeVideos; i++) {
-		video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
+	//for (int i = 0; i < cantidadDeVideos; i++) {
+	//	video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
+	//}
+	if (!mostrarVentana1) {
+		video[0].draw(20 + (500 * 0), 20, videoW * escala, videoH * escala);
+	}
+	if (!mostrarVentana2) {
+		video[1].draw(20 + (500 * 1), 20, videoW * escala, videoH * escala);
 	}
 
 
@@ -77,15 +91,113 @@ void ofApp::draw() {
 
 }
 
+///VENTANA 11111111111111 -------------------------------------------------------------------------
+void ofApp::setupVentana1() {
+
+}
+
+void ofApp::drawVentana1(ofEventArgs & args) {
+	if (mostrarVentana1)
+	{
+		///parametros de tamaño
+		float escala = 0.3;
+		float videoW = 1280;
+		float videoH = 720;
+
+		///si no esta visible, agrandar ventana
+		if (!estaVisibleVentana1) {
+			ofSetWindowShape(videoW*escala, videoH*escala);
+			estaVisibleVentana1 = true;
+		}
+
+		///DRAW propiamente dicho
+
+		///VIDEO: draw
+		//video[1].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
+		video[0].draw(0, 0, ofGetWidth(), ofGetHeight());
+
+	}
+	else {
+		if (estaVisibleVentana1)
+		{
+
+			ofSetWindowShape(0, 0);
+			estaVisibleVentana1 = false;
+		}
+	}
+}
+void  ofApp::keyPressedVentana1(ofKeyEventArgs & args) {
+	//string k = ofToString(args.key);
+	//cons(k);
+	if (args.key == 'f') {
+		//cons("fullscreen");
+		ofToggleFullscreen();
+
+	}
+
+}
+//void ofApp::mouseDraggedVentana1(ofMouseEventArgs & args) {
+//	cout << "test   " << args.x << " , " << args.y << endl;
+//	//cons("test");
+//}
+
+///VENTANA 2222222222222222 -------------------------------------------------------------------------
+void ofApp::setupVentana2() {
+
+}
+
+void ofApp::drawVentana2(ofEventArgs & args) {
+	if (mostrarVentana2)
+	{
+		///parametros de tamaño
+		float escala = 0.3;
+		float videoW = 1280;
+		float videoH = 720;
+
+		///si no esta visible, agrandar ventana
+		if (!estaVisibleVentana2) {
+			ofSetWindowShape(videoW*escala, videoH*escala);
+			estaVisibleVentana2 = true;
+		}
+
+		///DRAW propiamente dicho
+
+		///VIDEO: draw
+		//video[1].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
+		video[1].draw(0, 0, ofGetWidth(), ofGetHeight());
+
+	}
+	else {
+		if (estaVisibleVentana2)
+		{
+			ofSetWindowShape(10, 10);
+			estaVisibleVentana2 = false;
+		}
+	}
+}
+void  ofApp::keyPressedVentana2(ofKeyEventArgs & args) {
+
+}
+///-------------------------------------------------------------------------
+
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
+	///ventanas
+	if (key == '1')
+	{
+		mostrarVentana1 = !mostrarVentana1;
+	}
+	if (key == '2')
+	{
+		mostrarVentana2 = !mostrarVentana2;
+	}
 
 	///webcam
-	if (key == '1')
+	if (key == '3')
 	{
 		webcam1.siguiente();
 	}
-	if (key == '2')
+	if (key == '4')
 	{
 		webcam2.siguiente();
 	}
