@@ -19,7 +19,8 @@ int gIndex = 0;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-	ofBackground(51);
+	//ofBackground(51);
+	ofBackground(0, 0, 70);
 
 	///ocultar consola
 	//FreeConsole();
@@ -49,8 +50,8 @@ void ofApp::setup() {
 	// fingerMovie.setPixelFormat(OF_PIXELS_RGBA);
 
 	///WEBCAMS
-	webcam1.setup(20, 300, 0);
-	webcam2.setup(20 + 500, 300, 1);
+	//webcam1.setup(20, 300, 0);
+	//webcam2.setup(20 + 500, 300, 1);
 
 	///OSC
 	// listen on the given port
@@ -72,8 +73,8 @@ void ofApp::update() {
 	ofSetWindowTitle(strm.str());
 
 	///webcam
-	webcam1.update();
-	webcam2.update();
+	//webcam1.update();
+	//webcam2.update();
 
 	///OSC
 	// check for waiting messages
@@ -123,31 +124,51 @@ void ofApp::update() {
 
 //--------------------------------------------------------------
 void ofApp::draw() {
+	//ofSetColor(0, 0, 100);
 	ofSetColor(255);
 
 	///VIDEO: draw
 	float escala = 0.3;
 	float videoW = 1280;
 	float videoH = 720;
+	videoW *= escala;
+	videoH *= escala;
 	//for (int i = 0; i < cantidadDeVideos; i++) {
 	//	video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
 	//}
 	if (!mostrarVentana1) {
-		video[0].draw(20 + (500 * 0), 20, videoW * escala, videoH * escala);
+		video[0].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 20, videoW, videoH);
 	}
 	if (!mostrarVentana2) {
-		video[1].draw(20 + (500 * 1), 20, videoW * escala, videoH * escala);
+		video[1].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 20, videoW, videoH);
 	}
 
-
 	///webcam
-	webcam1.draw();
-	webcam2.draw();
+	//webcam1.draw();
+	//webcam2.draw();
+
+	///TEXTOSSSSS
+	ofSetColor(210);
+	string lineas[20];
+	lineas[0] = "<ESC> Salir";
+	lineas[1] = "<P> Preview";
+	lineas[3] = "FPS: " + ofToString(ofGetFrameRate());
 
 	///OSC
-	string msj = "Index: ";
+	lineas[4] = "------------";
+	string msj = "INDEX: ";
 	msj += ofToString(gIndex);
-	ofDrawBitmapString(msj, 20, ofGetHeight() - 30);
+	lineas[5] = msj;
+
+	///loop impresion de array de texto(lineas)
+	int elementos = sizeof(lineas) / sizeof(lineas[0]);
+	for (int i = 0; i < elementos; i++)
+	{
+		if (lineas[i] != "")
+		{
+			ofDrawBitmapString(lineas[i], 20, 20 * (i + 1));
+		}
+	}
 }
 
 ///VENTANA 11111111111111 -------------------------------------------------------------------------
@@ -188,12 +209,20 @@ void ofApp::drawVentana1(ofEventArgs & args) {
 	}
 }
 void  ofApp::keyPressedVentana1(ofKeyEventArgs & args) {
-	//string k = ofToString(args.key);
-	//cons(k);
+	///este evento sirve para las 2 ventanas!!
+
+	///FULLSCREEN
 	if (args.key == 'f') {
 		//cons("fullscreen");
 		ofToggleFullscreen();
 
+	}
+
+	///ventanas
+	if (args.key == 'p')
+	{
+		mostrarVentana1 = !mostrarVentana1;
+		mostrarVentana2 = !mostrarVentana2;
 	}
 
 }
@@ -247,24 +276,21 @@ void  ofApp::keyPressedVentana2(ofKeyEventArgs & args) {
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {
 	///ventanas
-	if (key == '1')
+	if (key == 'p')
 	{
 		mostrarVentana1 = !mostrarVentana1;
-	}
-	if (key == '2')
-	{
 		mostrarVentana2 = !mostrarVentana2;
 	}
 
 	///webcam
-	if (key == '3')
-	{
-		webcam1.siguiente();
-	}
-	if (key == '4')
-	{
-		webcam2.siguiente();
-	}
+	//if (key == '1')
+	//{
+	//	webcam1.siguiente();
+	//}
+	//if (key == '2')
+	//{
+	//	webcam2.siguiente();
+	//}
 
 	///salir
 	if (key == 'q')
