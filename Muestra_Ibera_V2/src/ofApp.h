@@ -1,9 +1,14 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxOsc.h"
 #include "ofxWMFVideoPlayer.h"
 #include "zfun.h"
+
 //#include "miWebcam.h"
+
+///OSC
+#define PORT 12345
 
 class ofApp : public ofBaseApp{
 
@@ -24,6 +29,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+		void close();
 		
 		///ventanas
 		void setupVentana1();
@@ -54,4 +60,7 @@ class ofApp : public ofBaseApp{
 		//ofVideoGrabber webcam2;
 		//int camWidth;
 		//int camHeight;
+
+		///OSC
+		ofxOscReceiver receiver;
 };
