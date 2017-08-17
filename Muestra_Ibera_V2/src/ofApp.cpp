@@ -18,6 +18,9 @@ miWebcam webcam2;
 void ofApp::setup() {
 	ofBackground(51);
 
+	///ocultar consola
+	FreeConsole();
+
 	///VIDEO: load
 	video[0].load("video1a.mp4");
 	video[1].load("video1b.mp4");
