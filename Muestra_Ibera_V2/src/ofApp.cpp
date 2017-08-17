@@ -156,13 +156,13 @@ void ofApp::setupVentana1() {
 }
 
 void ofApp::drawVentana1(ofEventArgs & args) {
+	///parametros de tamaño
+	float escala = 0.3;
+	float videoW = 1280;
+	float videoH = 720;
+
 	if (mostrarVentana1)
 	{
-		///parametros de tamaño
-		float escala = 0.3;
-		float videoW = 1280;
-		float videoH = 720;
-
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana1) {
 			ofSetWindowShape(videoW*escala, videoH*escala);
@@ -181,7 +181,8 @@ void ofApp::drawVentana1(ofEventArgs & args) {
 		if (estaVisibleVentana1)
 		{
 			ofSetWindowShape(0, 0);
-			ofSetWindowPosition(0, -50);
+			//ofSetWindowPosition(0, -50);
+			ofSetWindowPosition(150, 10);
 			estaVisibleVentana1 = false;
 		}
 	}
@@ -207,13 +208,13 @@ void ofApp::setupVentana2() {
 }
 
 void ofApp::drawVentana2(ofEventArgs & args) {
+	///parametros de tamaño
+	float escala = 0.3;
+	float videoW = 1280;
+	float videoH = 720;
+
 	if (mostrarVentana2)
 	{
-		///parametros de tamaño
-		float escala = 0.3;
-		float videoW = 1280;
-		float videoH = 720;
-
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana2) {
 			ofSetWindowShape(videoW*escala, videoH*escala);
@@ -232,7 +233,8 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 		if (estaVisibleVentana2)
 		{
 			ofSetWindowShape(10, 10);
-			ofSetWindowPosition(0, -50);
+			//ofSetWindowPosition(0, -50);
+			ofSetWindowPosition((videoW*escala) + 150, 10);
 			estaVisibleVentana2 = false;
 		}
 	}
@@ -322,8 +324,14 @@ void ofApp::dragEvent(ofDragInfo dragInfo) {
 }
 
 void ofApp::close() {
-	cons("CHAUUUUUUUUUUUUU");
-	ofExit(0);
-	ofExitCallback();
-	
+	//cons("CHAUUUUUUUUUUUUU");
+	//ofExit(0);
+	//ofExitCallback();
+
+}
+void ofApp::exit() {
+	//cons("CHAUUUUUUUUUUUUU");
+	//ofExit(0);
+	//ofExitCallback();
+
 }
