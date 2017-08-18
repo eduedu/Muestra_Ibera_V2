@@ -95,7 +95,10 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;D:\of_v0.9.8_vs_release\addons\ofxOsc\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;D:\of_v0.9.8_vs_release\addons\ofxOsc\src;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -116,13 +119,10 @@
       <WarningLevel>Level3</WarningLevel>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\src;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;D:\of_v0.9.8_vs_release\addons\ofxOsc\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -139,13 +139,10 @@ D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDi
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\src;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;D:\of_v0.9.8_vs_release\addons\ofxOsc\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -167,13 +164,10 @@ D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDi
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\src;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;
-D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\of_v0.9.8_vs_release\addons\ofxGui\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter;D:\of_v0.9.8_vs_release\addons\ofxWMFVideoPlayer\src\presenter\common;D:\of_v0.9.8_vs_release\addons\ofxOsc\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\posix;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\ip\win32;D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters;
+D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -189,6 +183,77 @@ D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDi
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\Abstract3x3ConvolutionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\Abstract3x3PingPongFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\Abstract3x3TextureSamplingFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractDoGFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractPingPongRenderer.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractTwoInputCrossTextureSamplingFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractTwoInputFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AdditiveBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AlphaBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AlphaMaskFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AverageColorFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BilateralFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BloomFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BoxBlurFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BrightnessFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\CGAColorspaceFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ChromaKeyBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorBurnFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorMatrixFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorPackingFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorReplacementFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ContrastFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\CornerDetectionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\CrosshatchFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DarkenBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DilationFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DirectionalDoGFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DisplacementFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DissolveBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DoGFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\EdgeTangentFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\EdgeTangentSmoothingFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\EmbossFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ErosionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ExclusionBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\FilterChain.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\FlowDoGFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GammaFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GaussianBlurFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GradientMapFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GrayscaleFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\HalftoneFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\HarrisCornerDetectionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\HueFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\InvertFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\KuwaharaFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\LaplacianFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\LookupFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\LowPassFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\MotionDetectionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\MultiplyBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\NormalBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PerlinNoiseFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PerlinPixellationFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PixelateFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PoissonBlendFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PosterizeFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SaturationFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SketchFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SmoothToonFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SobelEdgeDetectionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ThresholdedNonMaximumSuppressionFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\TiltShiftFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ToonFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\VignetteFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\VoronoiFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\XYDerivativeFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ZoomBlurFilter.cpp" />
+    <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParametricObject.cpp" />
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.cpp" />
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.cpp" />
     <ClCompile Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxGuiGroup.cpp" />
@@ -223,6 +288,89 @@ D:\of_v0.9.8_vs_release\addons\ofxOsc\libs\oscpack\src\osc;%(AdditionalIncludeDi
     <ClCompile Include="src\zfun.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\Abstract3x3ConvolutionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\Abstract3x3PingPongFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\Abstract3x3TextureSamplingFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractDoGFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractPingPongRenderer.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractTwoInputCrossTextureSamplingFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AbstractTwoInputFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AdditiveBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AlphaBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AlphaMaskFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\AverageColorFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BilateralFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BloomFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BoxBlurFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\BrightnessFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\CGAColorspaceFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ChromaKeyBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorBurnFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorMatrixFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorPackingFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ColorReplacementFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ContrastFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\CornerDetectionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\CrosshatchFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DarkenBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DilationFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DirectionalDoGFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DisplacementFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DissolveBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\DoGFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\EdgeTangentFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\EdgeTangentSmoothingFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\EmbossFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ErosionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ExclusionBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\FilterChain.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\FlowDoGFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GammaFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GaussianBlurFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GradientMapFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\GrayscaleFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\HalftoneFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\HarrisCornerDetectionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\HueFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\InvertFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\KuwaharaFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\LaplacianFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\LookupFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\LowPassFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\MotionDetectionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\MultiplyBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\NormalBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PerlinNoiseFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PerlinPixellationFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PixelateFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PoissonBlendFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\PosterizeFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SaturationFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SketchFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SmoothToonFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\SobelEdgeDetectionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ThresholdedNonMaximumSuppressionFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\TiltShiftFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ToonFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\VignetteFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\VoronoiFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\XYDerivativeFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\filters\ZoomBlurFilter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\ofxFilterLibrary.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\AbstractParameter.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\Parameter2f.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\Parameter2fv.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\Parameter3f.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\Parameter3fv.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\Parameter4f.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParameterF.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParameterI.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParameterMatrix4f.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParameterT.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParameterV.h" />
+    <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxFilterLibrary\src\parameters\ParametricObject.h" />
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxBaseGui.h" />
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxButton.h" />
     <ClInclude Include="D:\of_v0.9.8_vs_release\addons\ofxGui\src\ofxGui.h" />

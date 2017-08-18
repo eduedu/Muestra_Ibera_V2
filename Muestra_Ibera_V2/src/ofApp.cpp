@@ -25,6 +25,10 @@ int gIndex = 0;
 
 //--------------------------------------------------------------
 void ofApp::setup() {
+	ofDisableArbTex();
+	//ofEnableSmoothing();
+	//ofEnableAlphaBlending();
+
 	//ofBackground(51);
 	ofBackground(50, 0, 0);
 
@@ -32,8 +36,8 @@ void ofApp::setup() {
 	//FreeConsole();
 
 	///VIDEOS: nombres
-	nombreA[0] = "video1a.mp4";
-	nombreB[0] = "video1b.mp4";
+	nombreA[0] = "video1b.mp4";
+	nombreB[0] = "video1a.mp4";
 	nombreA[1] = "video2a.mp4";
 	nombreB[1] = "video2b.mp4";
 
@@ -87,9 +91,10 @@ void ofApp::setup() {
 	receiver.setup(PORT);
 
 	///efectos
-	// Create resources to store and display another copy of the data
-	efecto1 = new unsigned char[videoW * videoH * 3];
-	textura1.allocate(videoW, videoH, GL_RGB);
+
+	filtroActual = 0;
+	filtros.push_back(new PixelateFilter(videoW, videoH));
+	filtros.push_back(new KuwaharaFilter(6));
 
 }
 
@@ -97,17 +102,14 @@ void ofApp::setup() {
 //--------------------------------------------------------------
 void ofApp::update() {
 	///VIDEO: update
-	//for (int i = 0; i < cantidadDeVideos; i++) {
-	//	video[i].update();
-	//}
 	for (int i = 0; i < cantidadDeVideos; i++) {
 		if (i == gIndex)
 		{
-			if (videoA[i].isStopped())
+			if (!videoA[i].isPlaying())
 			{
 				videoA[i].play();
 			}
-			if (videoB[i].isStopped())
+			if (!videoB[i].isPlaying())
 			{
 				videoB[i].play();
 			}
@@ -127,33 +129,6 @@ void ofApp::update() {
 
 	videoA[gIndex].update();
 	videoB[gIndex].update();
-
-	///efectos
-	//for (int i = 0; i < cantidadDeVideos; i++) {
-	//	if (video[i].isFrameNew())
-	//	{
-	//		// Obtain a pointer to the grabber's image data.
-	//		ofPixels pixelData = video[i].getPixels();
-
-	//		// Reckon the total number of bytes to examine. 
-	//		// This is the image's width times its height,
-	//		// times 3 -- because each pixel requires 3 bytes
-	//		// to store its R, G, and B color components.  
-	//		int nTotalBytes = videoW * videoH* 3;
-
-	//		// For every byte of the RGB image data,
-	//		for (int i = 0; i<nTotalBytes; i++) {
-
-	//			// pixelData[i] is the i'th byte of the image;
-	//			// subtract it from 255, to make a "photo negative"
-	//			efecto1[i] = 255 - pixelData[i];
-	//		}
-
-	//		// Now stash the inverted data in an ofTexture
-	//		textura1.loadData(efecto1, videoW, videoH, GL_RGB);
-	//	}  
-	//}
-
 
 
 	///window: titulo, fps
@@ -200,12 +175,6 @@ void ofApp::update() {
 					msg_string += "unknown";
 				}
 			}
-			//// add to the list of strings to display
-			//msg_strings[current_msg_string] = msg_string;
-			//timers[current_msg_string] = ofGetElapsedTimef() + 5.0f;
-			//current_msg_string = (current_msg_string + 1) % NUM_MSG_STRINGS;
-			//// clear the next line
-			//msg_strings[current_msg_string] = "";
 			cons(msg_string);
 		}
 	}
@@ -217,14 +186,46 @@ void ofApp::draw() {
 	ofSetColor(255);
 
 	///VIDEO: draw
-	//for (int i = 0; i < cantidadDeVideos; i++) {
-	//	video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
-	//}
 	if (!mostrarVentana1) {
-		//videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 30, videoW, videoH);
+		videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 30, videoW, videoH);
+		
+		///efectos
+		//ofSetColor(255);
+		//ofPushMatrix();
+		//ofScale(-1, 1);
+		//ofTranslate(-videoW, 0);
+		//filtros[filtroActual]->begin();
+		////videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 30, videoW, videoH);
+		//videoA[gIndex].draw(0, 0);
+		//filtros[filtroActual]->end();
+		//ofPopMatrix();
+
+		//ofTexture * tex = videoA[gIndex].getTexturePtr();
+		//ofTexture tex = videoA[gIndex].getTexture();
+		//Rectangle(fill()
+
+		///efecto1
+		////ofSetHexColor(0x000000);
+		////videoA[gIndex].unlockSharedTexture();
+		//ofPixels & pixels = videoA[gIndex].getPixels();
+		////videoA[gIndex].lockSharedTexture();
+
+		//int vidWidth = pixels.getWidth();
+		//int vidHeight = pixels.getHeight();
+		//int nChannels = pixels.getNumChannels();
+
+		//// let's move through the "RGB(A)" char array
+		//// using the red pixel to control the size of a circle.
+		//for (int i = 4; i < vidWidth; i += 8) {
+		//	for (int j = 4; j < vidHeight; j += 8) {
+		//		unsigned char r = pixels[(j * 320 + i)*nChannels];
+		//		float val = 1 - ((float)r / 255.0f);
+		//		ofDrawCircle(400 + i, 20 + j, 2 * val);
+		//	}
+		//}
 	}
 	if (!mostrarVentana2) {
-		//videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 30, videoW, videoH);
+		videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 30, videoW, videoH);
 	}
 	ofDrawBitmapString(nombreA[gIndex], 20, ofGetWindowHeight() - 15);
 	ofDrawBitmapString(nombreB[gIndex], 20 + 500, ofGetWindowHeight() - 15);
@@ -233,41 +234,24 @@ void ofApp::draw() {
 	//webcam1.draw();
 	//webcam2.draw();
 
-	///efectos
-	//textura1.draw(20, 20);
 
-
-	///efecto2
-	
-	ofSetHexColor(0x000000);
-	ofPixels & pixels = videoA[1].getPixels();
-	//int vidWidth = pixels.getWidth();
-	//int vidHeight = pixels.getHeight();
-	//int nChannels = pixels.getNumChannels();
-	//// let's move through the "RGB(A)" char array
-	//// using the red pixel to control the size of a circle.
-	//for (int i = 4; i < vidWidth; i += 8) {
-	//	for (int j = 4; j < vidHeight; j += 8) {
-	//		unsigned char r = pixels[(j * 320 + i)*nChannels];
-	//		float val = 1 - ((float)r / 255.0f);
-	//		ofDrawCircle(400 + i, 20 + j, 10 * val);
-	//	}
-	//}
 
 
 	///TEXTOSSSSS
 	ofSetColor(210);
 	string lineas[20];
 	lineas[0] = "<ESC> Salir";
-	lineas[1] = "<P> Preview/ventanas";
-	lineas[2] = "<F> Fullscreen (desde las ventanas)";
-	lineas[3] = "FPS: " + ofToString(ofGetFrameRate());
+	lineas[1] = "<p> Preview/ventanas";
+	lineas[2] = "<f> Fullscreen (desde las ventanas)";
+	lineas[3] = "<i> Cambiar indice";
+	lineas[15] = "filtro: " + filtros[filtroActual]->getName();
+	lineas[16] = "FPS: " + ofToString(ofGetFrameRate());
 
 	///OSC
-	lineas[4] = "------------";
+	lineas[17] = "------------";
 	string msj = "INDEX: ";
 	msj += ofToString(gIndex);
-	lineas[5] = msj;
+	lineas[18] = msj;
 
 	///loop impresion de array de texto(lineas)
 	int elementos = sizeof(lineas) / sizeof(lineas[0]);
@@ -332,10 +316,6 @@ void  ofApp::keyPressedVentana1(ofKeyEventArgs & args) {
 	}
 
 }
-//void ofApp::mouseDraggedVentana1(ofMouseEventArgs & args) {
-//	cout << "test   " << args.x << " , " << args.y << endl;
-//	//cons("test");
-//}
 
 ///VENTANA 2222222222222222 -------------------------------------------------------------------------
 void ofApp::setupVentana2() {
@@ -408,6 +388,11 @@ void ofApp::keyPressed(int key) {
 		{
 			gIndex = 0;
 		}
+	}
+
+	if (key == ' ') {
+		filtroActual++;
+		if (filtroActual >= filtros.size()) filtroActual = 0;
 	}
 
 }

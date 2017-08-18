@@ -1,9 +1,11 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxFilterLibrary.h"
 #include "ofxOsc.h"
 #include "ofxWMFVideoPlayer.h"
 #include "zfun.h"
+
 
 //#include "miWebcam.h"
 
@@ -34,7 +36,6 @@ class ofApp : public ofBaseApp{
 		//void event
 		
 
-
 		///ventanas
 		void setupVentana1();
 		void drawVentana1(ofEventArgs & args);
@@ -44,34 +45,24 @@ class ofApp : public ofBaseApp{
 		void setupVentana2();
 		void drawVentana2(ofEventArgs & args);
 
-
-		//ofVideoPlayer video1;
-		//ofDirectShowPlayer video1;
-		//ofxWMFVideoPlayer video1;
 		
 		///VIDEOS
 		const static int cantidadDeVideos = 9;
 		ofxWMFVideoPlayer videoA[cantidadDeVideos];
 		ofxWMFVideoPlayer videoB[cantidadDeVideos];
+		//ofDirectShowPlayer videoA[cantidadDeVideos];
+		//ofDirectShowPlayer videoB[cantidadDeVideos];
+		//ofVideoPlayer videoA[cantidadDeVideos];
+		//ofVideoPlayer videoB[cantidadDeVideos];
 
 		string nombreA[cantidadDeVideos];
 		string nombreB[cantidadDeVideos];
 
-		//ofxWMFVideoPlayer video1;
-		//ofxWMFVideoPlayer video2;
-
-		//ofVideoPlayer video1;
-		//ofVideoPlayer video2;
-		
-		//ofVideoGrabber webcam1;
-		//ofVideoGrabber webcam2;
-		//int camWidth;
-		//int camHeight;
 
 		///OSC
 		ofxOscReceiver receiver;
 
-		///efectos
-		ofTexture textura1;
-		unsigned char* efecto1;
+		///efectos/filtros
+		vector<AbstractFilter *>	filtros;
+		int							filtroActual;
 };
