@@ -3,6 +3,12 @@
 #include "miWebcam.h"
 #include "ofAppGLFWWindow.h"
 
+///DIMENSIONES
+float escala = 0.3;
+int videoW = 1280 * escala;
+int videoH = 720 * escala;
+
+
 ///ventanas
 bool mostrarVentana1 = false;
 bool estaVisibleVentana1 = false;
@@ -20,32 +26,51 @@ int gIndex = 0;
 //--------------------------------------------------------------
 void ofApp::setup() {
 	//ofBackground(51);
-	ofBackground(0, 0, 70);
+	ofBackground(50, 0, 0);
 
 	///ocultar consola
 	//FreeConsole();
 
 	///VIDEO: load
-	video[0].load("video1a.mp4");
-	video[1].load("video1b.mp4");
-	//video1.load("zvideo1a.avi");
-	//video2.load("zvideo1a.avi");
-	//video1.load("zvideo1a.avi");
-	//video2.load("zvideo1b.avi");
+	videoA[0].load("video1a.mp4");
+	videoB[0].load("video1b.mp4");
+	videoA[1].load("video2a.mp4");
+	videoB[1].load("video2b.mp4");
+
+	videoA[2].load("video3a.mp4");
+	videoB[2].load("video3b.mp4");
+	videoA[3].load("video4a.mp4");
+	videoB[3].load("video4b.mp4");
+
+	videoA[4].load("video5a.mp4");
+	videoB[4].load("video5b.mp4");
+	videoA[5].load("video6a.mp4");
+	videoB[5].load("video6b.mp4");
+
+	videoA[6].load("video7a.mp4");
+	videoB[6].load("video7b.mp4");
+	videoA[7].load("video8a.mp4");
+	videoB[7].load("video8b.mp4");
+
+	videoA[8].load("video9a.mp4");
+	videoB[8].load("video9b.mp4");
 
 	///video: loop
 	for (int i = 0; i < cantidadDeVideos; i++) {
-		video[i].setLoopState(OF_LOOP_NORMAL);
+		videoA[i].setLoopState(OF_LOOP_NORMAL);
+		videoB[i].setLoopState(OF_LOOP_NORMAL);
 	}
 	//video1.setUseTexture(false);
 
 	///VIDEO: play
-	for (int i = 0; i < cantidadDeVideos; i++) {
-		video[i].play();
-	}
+	//for (int i = 0; i < cantidadDeVideos; i++) {
+	//	videoA[i].play();
+	//}
+	videoA[gIndex].play();
+	videoB[gIndex].play();
 
 	///VIDEO: otras configuraciones
-	ofSetVerticalSync(true);
+	//ofSetVerticalSync(true);
 	// Uncomment this to show movies with alpha channels
 	// fingerMovie.setPixelFormat(OF_PIXELS_RGBA);
 
@@ -57,15 +82,51 @@ void ofApp::setup() {
 	// listen on the given port
 	cout << "listening for osc messages on port " << PORT << "\n";
 	receiver.setup(PORT);
+
+	///efectos
+	// Create resources to store and display another copy of the data
+	efecto1 = new unsigned char[videoW * videoH * 3];
+	textura1.allocate(videoW, videoH, GL_RGB);
+
 }
 
 
 //--------------------------------------------------------------
 void ofApp::update() {
 	///VIDEO: update
-	for (int i = 0; i < cantidadDeVideos; i++) {
-		video[i].update();
-	}
+	//for (int i = 0; i < cantidadDeVideos; i++) {
+	//	video[i].update();
+	//}
+	videoA[gIndex].update();
+	videoB[gIndex].update();
+
+	///efectos
+	//for (int i = 0; i < cantidadDeVideos; i++) {
+	//	if (video[i].isFrameNew())
+	//	{
+	//		// Obtain a pointer to the grabber's image data.
+	//		ofPixels pixelData = video[i].getPixels();
+
+	//		// Reckon the total number of bytes to examine. 
+	//		// This is the image's width times its height,
+	//		// times 3 -- because each pixel requires 3 bytes
+	//		// to store its R, G, and B color components.  
+	//		int nTotalBytes = videoW * videoH* 3;
+
+	//		// For every byte of the RGB image data,
+	//		for (int i = 0; i<nTotalBytes; i++) {
+
+	//			// pixelData[i] is the i'th byte of the image;
+	//			// subtract it from 255, to make a "photo negative"
+	//			efecto1[i] = 255 - pixelData[i];
+	//		}
+
+	//		// Now stash the inverted data in an ofTexture
+	//		textura1.loadData(efecto1, videoW, videoH, GL_RGB);
+	//	}  
+	//}
+
+
 
 	///window: titulo, fps
 	std::stringstream strm;
@@ -128,30 +189,49 @@ void ofApp::draw() {
 	ofSetColor(255);
 
 	///VIDEO: draw
-	float escala = 0.3;
-	float videoW = 1280;
-	float videoH = 720;
-	videoW *= escala;
-	videoH *= escala;
+
+
 	//for (int i = 0; i < cantidadDeVideos; i++) {
 	//	video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
 	//}
 	if (!mostrarVentana1) {
-		video[0].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 20, videoW, videoH);
+		videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 20, videoW, videoH);
 	}
 	if (!mostrarVentana2) {
-		video[1].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 20, videoW, videoH);
+		videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 20, videoW, videoH);
 	}
 
 	///webcam
 	//webcam1.draw();
 	//webcam2.draw();
 
+	///efectos
+	//textura1.draw(20, 20);
+
+
+	///efecto2
+	//ofSetHexColor(0x000000);
+	//ofPixels & pixels = video[1].getPixels();
+	//int vidWidth = pixels.getWidth();
+	//int vidHeight = pixels.getHeight();
+	//int nChannels = pixels.getNumChannels();
+	//// let's move through the "RGB(A)" char array
+	//// using the red pixel to control the size of a circle.
+	//for (int i = 4; i < vidWidth; i += 8) {
+	//	for (int j = 4; j < vidHeight; j += 8) {
+	//		unsigned char r = pixels[(j * 320 + i)*nChannels];
+	//		float val = 1 - ((float)r / 255.0f);
+	//		ofDrawCircle(400 + i, 20 + j, 10 * val);
+	//	}
+	//}
+
+
 	///TEXTOSSSSS
 	ofSetColor(210);
 	string lineas[20];
 	lineas[0] = "<ESC> Salir";
-	lineas[1] = "<P> Preview";
+	lineas[1] = "<P> Preview/ventanas";
+	lineas[2] = "<F> Fullscreen (desde las ventanas)";
 	lineas[3] = "FPS: " + ofToString(ofGetFrameRate());
 
 	///OSC
@@ -177,16 +257,11 @@ void ofApp::setupVentana1() {
 }
 
 void ofApp::drawVentana1(ofEventArgs & args) {
-	///parametros de tamaño
-	float escala = 0.3;
-	float videoW = 1280;
-	float videoH = 720;
-
 	if (mostrarVentana1)
 	{
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana1) {
-			ofSetWindowShape(videoW*escala, videoH*escala);
+			ofSetWindowShape(videoW, videoH);
 			ofSetWindowPosition(150, 50);
 			estaVisibleVentana1 = true;
 		}
@@ -195,7 +270,8 @@ void ofApp::drawVentana1(ofEventArgs & args) {
 
 		///VIDEO: draw
 		//video[1].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
-		video[0].draw(0, 0, ofGetWidth(), ofGetHeight());
+		//video[0].draw(0, 0, ofGetWidth(), ofGetHeight());
+		videoA[gIndex].draw(0, 0, ofGetWidth(), ofGetHeight());
 
 	}
 	else {
@@ -237,17 +313,12 @@ void ofApp::setupVentana2() {
 }
 
 void ofApp::drawVentana2(ofEventArgs & args) {
-	///parametros de tamaño
-	float escala = 0.3;
-	float videoW = 1280;
-	float videoH = 720;
-
 	if (mostrarVentana2)
 	{
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana2) {
-			ofSetWindowShape(videoW*escala, videoH*escala);
-			ofSetWindowPosition(videoW*escala + 150, 50);
+			ofSetWindowShape(videoW, videoH);
+			ofSetWindowPosition(videoW+ 150, 50);
 			estaVisibleVentana2 = true;
 		}
 
@@ -255,7 +326,8 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 
 		///VIDEO: draw
 		//video[1].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
-		video[1].draw(0, 0, ofGetWidth(), ofGetHeight());
+		//video[1].draw(0, 0, ofGetWidth(), ofGetHeight());
+		videoB[gIndex].draw(0, 0, ofGetWidth(), ofGetHeight());
 
 	}
 	else {
@@ -263,7 +335,7 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 		{
 			ofSetWindowShape(10, 10);
 			//ofSetWindowPosition(0, -50);
-			ofSetWindowPosition((videoW*escala) + 150, 10);
+			ofSetWindowPosition((videoW) + 150, 10);
 			estaVisibleVentana2 = false;
 		}
 	}

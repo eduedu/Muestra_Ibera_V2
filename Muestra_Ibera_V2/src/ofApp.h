@@ -33,6 +33,8 @@ class ofApp : public ofBaseApp{
 		void exit();
 		//void event
 		
+
+
 		///ventanas
 		void setupVentana1();
 		void drawVentana1(ofEventArgs & args);
@@ -48,8 +50,9 @@ class ofApp : public ofBaseApp{
 		//ofxWMFVideoPlayer video1;
 		
 		///VIDEOS
-		ofxWMFVideoPlayer video[2];
-		int cantidadDeVideos = 2;
+		ofxWMFVideoPlayer videoA[9];
+		ofxWMFVideoPlayer videoB[9];
+		int cantidadDeVideos = 9;
 
 		//ofxWMFVideoPlayer video1;
 		//ofxWMFVideoPlayer video2;
@@ -65,4 +68,8 @@ class ofApp : public ofBaseApp{
 
 		///OSC
 		ofxOscReceiver receiver;
+
+		///efectos
+		ofTexture textura1;
+		unsigned char* efecto1;
 };
