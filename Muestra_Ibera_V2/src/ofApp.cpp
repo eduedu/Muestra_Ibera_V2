@@ -31,32 +31,35 @@ void ofApp::setup() {
 	///ocultar consola
 	//FreeConsole();
 
-	///VIDEO: load
-	videoA[0].load("video1a.mp4");
-	videoB[0].load("video1b.mp4");
-	videoA[1].load("video2a.mp4");
-	videoB[1].load("video2b.mp4");
+	///VIDEOS: nombres
+	nombreA[0] = "video1a.mp4";
+	nombreB[0] = "video1b.mp4";
+	nombreA[1] = "video2a.mp4";
+	nombreB[1] = "video2b.mp4";
 
-	videoA[2].load("video3a.mp4");
-	videoB[2].load("video3b.mp4");
-	videoA[3].load("video4a.mp4");
-	videoB[3].load("video4b.mp4");
+	nombreA[2] = "video3a.mp4";
+	nombreB[2] = "video3b.mp4";
+	nombreA[3] = "video4a.mp4";
+	nombreB[3] = "video4b.mp4";
 
-	videoA[4].load("video5a.mp4");
-	videoB[4].load("video5b.mp4");
-	videoA[5].load("video6a.mp4");
-	videoB[5].load("video6b.mp4");
+	nombreA[4] = "video5a.mp4";
+	nombreB[4] = "video5b.mp4";
+	nombreA[5] = "video6a.mp4";
+	nombreB[5] = "video6b.mp4";
 
-	videoA[6].load("video7a.mp4");
-	videoB[6].load("video7b.mp4");
-	videoA[7].load("video8a.mp4");
-	videoB[7].load("video8b.mp4");
+	nombreA[6] = "video7a.mp4";
+	nombreB[6] = "video7b.mp4";
+	nombreA[7] = "video8a.mp4";
+	nombreB[7] = "video8b.mp4";
 
-	videoA[8].load("video9a.mp4");
-	videoB[8].load("video9b.mp4");
+	nombreA[8] = "video9a.mp4";
+	nombreB[8] = "video9b.mp4";
 
-	///video: loop
+	///video: load y seteo como loop
 	for (int i = 0; i < cantidadDeVideos; i++) {
+		videoA[i].load(nombreA[i]);
+		videoB[i].load(nombreB[i]);
+
 		videoA[i].setLoopState(OF_LOOP_NORMAL);
 		videoB[i].setLoopState(OF_LOOP_NORMAL);
 	}
@@ -97,6 +100,31 @@ void ofApp::update() {
 	//for (int i = 0; i < cantidadDeVideos; i++) {
 	//	video[i].update();
 	//}
+	for (int i = 0; i < cantidadDeVideos; i++) {
+		if (i == gIndex)
+		{
+			if (videoA[i].isStopped())
+			{
+				videoA[i].play();
+			}
+			if (videoB[i].isStopped())
+			{
+				videoB[i].play();
+			}
+		}
+		else
+		{
+			if (videoA[i].isPlaying())
+			{
+				videoA[i].stop();
+			}
+			if (videoB[i].isPlaying())
+			{
+				videoB[i].stop();
+			}
+		}
+	}
+
 	videoA[gIndex].update();
 	videoB[gIndex].update();
 
@@ -189,17 +217,17 @@ void ofApp::draw() {
 	ofSetColor(255);
 
 	///VIDEO: draw
-
-
 	//for (int i = 0; i < cantidadDeVideos; i++) {
 	//	video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
 	//}
 	if (!mostrarVentana1) {
-		videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 20, videoW, videoH);
+		videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 30, videoW, videoH);
 	}
 	if (!mostrarVentana2) {
-		videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 20, videoW, videoH);
+		videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 30, videoW, videoH);
 	}
+	ofDrawBitmapString(nombreA[gIndex], 20, ofGetWindowHeight() - 15);
+	ofDrawBitmapString(nombreB[gIndex], 20 + 500, ofGetWindowHeight() - 15);
 
 	///webcam
 	//webcam1.draw();
@@ -244,10 +272,11 @@ void ofApp::draw() {
 	int elementos = sizeof(lineas) / sizeof(lineas[0]);
 	for (int i = 0; i < elementos; i++)
 	{
-		if (lineas[i] != "")
+		if (lineas[i] == "")
 		{
-			ofDrawBitmapString(lineas[i], 20, 20 * (i + 1));
+			lineas[i] = ".";
 		}
+		ofDrawBitmapString(lineas[i], 20, 20 * (i + 1));
 	}
 }
 
@@ -318,7 +347,7 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 		///si no esta visible, agrandar ventana
 		if (!estaVisibleVentana2) {
 			ofSetWindowShape(videoW, videoH);
-			ofSetWindowPosition(videoW+ 150, 50);
+			ofSetWindowPosition(videoW + 150, 50);
 			estaVisibleVentana2 = true;
 		}
 
@@ -335,7 +364,7 @@ void ofApp::drawVentana2(ofEventArgs & args) {
 		{
 			ofSetWindowShape(10, 10);
 			//ofSetWindowPosition(0, -50);
-			ofSetWindowPosition((videoW) + 150, 10);
+			ofSetWindowPosition((videoW)+150, 10);
 			estaVisibleVentana2 = false;
 		}
 	}
@@ -369,6 +398,17 @@ void ofApp::keyPressed(int key) {
 	{
 		ofExit(0);
 	}
+
+	///aumentar index
+	if (key == 'i')
+	{
+		gIndex++;
+		if (gIndex >= cantidadDeVideos)
+		{
+			gIndex = 0;
+		}
+	}
+
 }
 
 //--------------------------------------------------------------

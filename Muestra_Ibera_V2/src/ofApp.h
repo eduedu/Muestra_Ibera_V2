@@ -50,9 +50,13 @@ class ofApp : public ofBaseApp{
 		//ofxWMFVideoPlayer video1;
 		
 		///VIDEOS
-		ofxWMFVideoPlayer videoA[9];
-		ofxWMFVideoPlayer videoB[9];
-		int cantidadDeVideos = 9;
+		const static int cantidadDeVideos = 9;
+		ofxWMFVideoPlayer videoA[cantidadDeVideos];
+		ofxWMFVideoPlayer videoB[cantidadDeVideos];
+
+
+		string nombreA[cantidadDeVideos];
+		string nombreB[cantidadDeVideos];
 
 		//ofxWMFVideoPlayer video1;
 		//ofxWMFVideoPlayer video2;
