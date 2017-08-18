@@ -54,7 +54,6 @@ class ofApp : public ofBaseApp{
 		ofxWMFVideoPlayer videoA[cantidadDeVideos];
 		ofxWMFVideoPlayer videoB[cantidadDeVideos];
 
-
 		string nombreA[cantidadDeVideos];
 		string nombreB[cantidadDeVideos];
 
@@ -63,7 +62,6 @@ class ofApp : public ofBaseApp{
 
 		//ofVideoPlayer video1;
 		//ofVideoPlayer video2;
-
 		
 		//ofVideoGrabber webcam1;
 		//ofVideoGrabber webcam2;

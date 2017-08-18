@@ -221,10 +221,10 @@ void ofApp::draw() {
 	//	video[i].draw(20 + (500 * i), 20, videoW * escala, videoH * escala);
 	//}
 	if (!mostrarVentana1) {
-		videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 30, videoW, videoH);
+		//videoA[gIndex].draw(20 + (500 * 0), ofGetWindowHeight() - videoH - 30, videoW, videoH);
 	}
 	if (!mostrarVentana2) {
-		videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 30, videoW, videoH);
+		//videoB[gIndex].draw(20 + (500 * 1), ofGetWindowHeight() - videoH - 30, videoW, videoH);
 	}
 	ofDrawBitmapString(nombreA[gIndex], 20, ofGetWindowHeight() - 15);
 	ofDrawBitmapString(nombreB[gIndex], 20 + 500, ofGetWindowHeight() - 15);
@@ -238,8 +238,9 @@ void ofApp::draw() {
 
 
 	///efecto2
-	//ofSetHexColor(0x000000);
-	//ofPixels & pixels = video[1].getPixels();
+	
+	ofSetHexColor(0x000000);
+	ofPixels & pixels = videoA[1].getPixels();
 	//int vidWidth = pixels.getWidth();
 	//int vidHeight = pixels.getHeight();
 	//int nChannels = pixels.getNumChannels();
